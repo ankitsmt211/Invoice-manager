@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-fjon2vp*l$oj3m2mnlt2e#586w1i%43p$*67+o#%04^7ptn^_0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'invoice-manager-a6oj.onrender.com'
+]
 
 
 # Application definition
