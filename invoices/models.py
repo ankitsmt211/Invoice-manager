@@ -8,7 +8,7 @@ from django.db import models
 class Invoice(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     invoice_number = models.CharField(max_length=255, unique=True)
-    customer_number = models.CharField(max_length=255)
+    customer_name = models.CharField(max_length=255)
     invoice_date = models.DateField()
 
 
