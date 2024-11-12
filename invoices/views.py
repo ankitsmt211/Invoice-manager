@@ -35,6 +35,7 @@ class SerializerInvoice(serializers.ModelSerializer):
             setattr(instance, attr, value)
         instance.save()
 
+        # assumed replacing meant that we remove older instances
         existing_details = InvoiceDetails.objects.filter(invoice=instance).all()
         if existing_details:
             existing_details.delete()
@@ -63,6 +64,5 @@ def create_or_update_invoice(request, *args, **kwargs):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         serializer.save()
-
         return Response("updated invoice successfully", status=status.HTTP_200_OK)
 
