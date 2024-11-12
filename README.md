@@ -8,6 +8,7 @@
 * create virtual environment `python3 -m venv venv`
 * Active virtual environment `source venv/bin/activate`
 * run command `pip install -r requirement.txt`
+* run migration `python3 manage.py migrate`
 * Start Application `python manage.py runserver`
 
 ---
